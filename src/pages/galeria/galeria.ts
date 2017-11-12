@@ -1,3 +1,4 @@
+import { firebaseService } from './../../services/firebase.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,8 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'galeria.html',
 })
 export class GaleriaPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  galeria=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, service: firebaseService) {
+    service.getGaleria().valueChanges()
+    .subscribe(galeria => {
+      this.galeria = galeria;
+      console.log(galeria,"sads")
+    });
+    
   }
 
   ionViewDidLoad() {

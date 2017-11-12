@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+       </button>
     <ion-title>galeria</ion-title>
   </ion-navbar>
 
@@ -14,5 +17,13 @@
 
 
 <ion-content padding>
-
+  <ion-list *ngFor="let imagen of galeria">
+    <ion-item>
+      <h1>{{imagen.nombreEvento}}</h1>
+    </ion-item>
+    <ion-list *ngFor="let foto of imagen.fotos">
+        <img style="height:20%;width:100% " src="{{foto.photo}}" /> 
+    </ion-list>
+    
+  </ion-list>
 </ion-content>

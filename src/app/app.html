@@ -1,9 +1,9 @@
 <ion-menu [content]='NAV'>
     <ion-content>
-        <img src="/assets/img/usuario.png" alt="">
+        <img  aling-center src="/assets/img/usuario.png" alt="">
         <ion-list>
-             <button  ion-item *ngFor="let page of pages" (click)="openPage(page)" menu-close >
-                 <ion-icon item-left name="{{page.icon}}"></ion-icon>
+             <button  ion-item *ngFor="let page of pages" (click)="openPage(page.component)" menuClose >
+                 <ion-icon item-left  name="{{page.icon}}"></ion-icon>
                   {{page.title}}
              </button>
         </ion-list>
