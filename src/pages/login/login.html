@@ -13,7 +13,20 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-image:url('https://avante.biz/wp-content/uploads/White-Abstract-Wallpapers/White-Abstract-Wallpapers-006.jpg'); 
+background-repeat: no-repeat; background-size: 100% 100%">
+
+    <ion-grid>
+        <ion-row>
+          <ion-col col-4></ion-col>
+          <ion-col col-4 style="margin-left:auto; margin-right: auto; display: block;">
+            <img src="https://www.desic-sl.com/wp-content/uploads/2017/06/pmi.png" 
+            style="width:100%; height:auto;">
+          </ion-col>
+          <ion-col col-4></ion-col>
+        </ion-row>
+      </ion-grid>
+
   <ion-item>
     <ion-label floating>Email Address</ion-label>
     <ion-input type="text" [(ngModel)]="user.email"></ion-input>
@@ -36,6 +49,7 @@
       </button>
     </ion-row>
   </ion-grid>
-  
+
+
 
 </ion-content>
