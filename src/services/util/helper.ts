@@ -1,0 +1,4 @@
+
+/*ConvertirTime(fecha:string){
+
+}*/
