@@ -23,7 +23,7 @@ pages: Array<{title: string, component: any, icon: string}>;
 
     this.pages=[
       {title: 'Inicio',           component: HomePage,        icon: 'home'},
-      {title: 'Proximos Eventos', component: EventosPage,     icon: 'calendar'},
+      {title: 'Eventos',          component: EventosPage,     icon: 'calendar'},
       {title: 'Documentos',       component: DocumentosPage,  icon: 'document'},
       {title: 'Proyectos',        component: ProyectosPage,   icon: 'ios-archive'},
       {title: 'Galeria',          component: GaleriaPage,     icon: 'images'},
