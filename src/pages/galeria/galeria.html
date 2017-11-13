@@ -16,9 +16,8 @@
 </ion-header>
 
 
-<ion-content padding style="background-image:url('https://media-cdn.tripadvisor.com/media/photo-s/09/c6/dc/2d/huaca-del-sol-y-la-luna.jpg'); 
-background-repeat: no-repeat; background-size: 100% 100%">
-  <ion-list *ngFor="let imagen of galeria">
+<ion-content padding >
+  <ion-list *ngFor="let imagen of galeria" class="inicio">
     <ion-item>
       <h1>{{imagen.nombreEvento}}</h1>
     </ion-item>

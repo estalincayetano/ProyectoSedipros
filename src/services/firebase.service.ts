@@ -29,6 +29,7 @@ export class firebaseService {
         let arraDate:Array<any> = dateTeamp.split("/");
         let fechaevento: Date = new Date(Number(arraDate[2]), Number(arraDate[1]), Number(arraDate[0]));
         console.log("conversion de fecha: ", fechaevento.getTime());
+        console.log("conversion de fechaentrada: ", fechaParametro.getTime());
         if (fechaevento.getTime() > fechaParametro.getTime()) { //Time :: conversion a MiliSgunos 23273982787392
           arrayResp.push(evento);
         }

@@ -17,6 +17,17 @@
 </ion-header>
 
 
-<ion-content padding style="background-image:url('https://media-cdn.tripadvisor.com/media/photo-s/09/c6/dc/2d/huaca-del-sol-y-la-luna.jpg'); 
-background-repeat: no-repeat; background-size: 100% 100%">
+<ion-content class="inicio"  >
+
+<ion-slides *ngFor="let evento of eventos" (click)="openEventoDetail(evento)">
+  <ion-slide>
+      <ion-card>
+          <h1 class="slide-title">{{evento.titulo}}</h1>
+          <img class="slide-image" src="{{evento.imagen}}" />
+          <p class="texto"> {{evento.descripcion}}</p>
+          <p>{{evento.fecha}}</p>
+      </ion-card>
+  </ion-slide>
+</ion-slides>
+
 </ion-content> 

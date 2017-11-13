@@ -17,3 +17,35 @@
 $menu-ios-background: #8a9597;
 $menu-md-background: #8a9597;
 $menu-wp-background: #8a9597;
+
+.slide-title {
+    margin-top: 2.8rem;
+    text-align: center;
+    
+  }
+.inicio{
+    background-size: cover;
+    background-image: url('assets/img/fondo.png');
+    background-position: center
+}
+  .slide-image {
+    align-content: center;
+    max-height: 50%;
+    max-width: 100%;
+    margin: 18px 0;
+    padding: 0 10px
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+
+.texto{
+    text-align: justify;
+    padding: 0 10px
+  }
+.ponente{
+  padding: 0 10px;
+  align-content: center; 
+}

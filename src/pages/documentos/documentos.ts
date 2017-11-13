@@ -1,4 +1,4 @@
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
@@ -24,7 +24,7 @@ export class DocumentosPage {
   items: Observable<Item[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private db: AngularFirestore) {
-    this.items = this.itemsCollection.snapshotChanges().map(actions => {
+    /*this.items = this.itemsCollection.snapshotChanges().map(actions => {
       return actions.map(a => {
         const data = a.payload.doc.data() as Item;
         const id = a.payload.doc.id;
@@ -32,7 +32,7 @@ export class DocumentosPage {
       });
     });
     console.log("mirando",this.itemsCollection);
-  }
+  */  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DocumentosPage');

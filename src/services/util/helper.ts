@@ -1,4 +1,0 @@
-
-/*ConvertirTime(fecha:string){
-
-}*/

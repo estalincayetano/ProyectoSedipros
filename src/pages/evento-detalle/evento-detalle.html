@@ -13,24 +13,25 @@
 </ion-header>
 
 
-<ion-content padding style="background-image:url('https://media-cdn.tripadvisor.com/media/photo-s/09/c6/dc/2d/huaca-del-sol-y-la-luna.jpg'); 
-background-repeat: no-repeat; background-size: 100% 100%">
+<ion-content class="page-evento-detalle">
+<ion-list >
+  <img class="slide-image" src="{{evento.imagen}}" />
+  <h1 class="slide-title ">{{evento.titulo}}</h1>
+  <h4 class="texto">organizador: {{evento.organizador}}</h4>
+  <H5 class="texto">Descripcion: </H5>
+  <p class="texto">{{evento.descripcion}}</p>
+  <p class="texto">Fecha: {{evento.fecha}}</p>
+  <p class="texto">Lugar: {{evento.lugar}}</p>
+  <p class="texto">Ponente:</p>
 
-  <img style="height:40%; width:100% " src="{{evento.imagen}}" />
-  <h1>{{evento.titulo}}</h1>
-  <h4>organizador: {{evento.organizador}}</h4>
-  <H5>Descripcion: </H5>
-  {{evento.descripcion}}
-  <p>Fecha: {{evento.fecha}}</p>
-  <p>Lugar: {{evento.lugar}}</p>
-  <p>Ponente:</p>
-  <ion-item *ngFor="let ponente of evento.ponente" (click)="openPonenteDetail(ponente)">
+
+  <ion-item *ngFor="let ponente of evento.ponente" (click)="openPonenteDetail(ponente)"class="texto">
     <ion-avatar item-left>
       <img src="{{ponente.photo}}" />
     </ion-avatar>
     <h4> {{ponente.nombre}}</h4>
   </ion-item>
-
+</ion-list>
 </ion-content>
 <ion-footer>
   <button ion-button full icon-left color="light" (click)="openAgendaDetail()">

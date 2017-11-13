@@ -1,3 +1,4 @@
+import { EventoDetallePage } from './../evento-detalle/evento-detalle';
 import { firebaseService } from './../../services/firebase.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -16,7 +17,9 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.eventos = this.servicio.getEventosbyFecha("11-11-2017");
+    this.eventos = this.servicio.getEventosbyFecha("11/12/2017");
   }
-
+  openEventoDetail(eventos) {
+    this.navCtrl.push(EventoDetallePage, {evento:eventos});
+}
 }

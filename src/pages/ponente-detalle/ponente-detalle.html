@@ -13,11 +13,10 @@
 </ion-header>
 
 
-<ion-content padding style="background-image:url('https://media-cdn.tripadvisor.com/media/photo-s/09/c6/dc/2d/huaca-del-sol-y-la-luna.jpg'); 
-background-repeat: no-repeat; background-size: 100% 100%">
-    <img style="height:50%; width:100% " src="{{ponente.photo}}" />
-    <h1>Nombre Completo:{{ponente.nombre}}</h1>
-    <h3>Titulo Obtenido: {{ponente.titulo}}</h3>
-    <H5>Descripcion: </H5>
-    {{ponente.descripcion}}
+<ion-content padding class="inicio">
+    <img class="ponente" src="{{ponente.photo}}" />
+    <h1 class="slide-title">Nombre Completo:{{ponente.nombre}}</h1>
+    <h3 class="slide-title">Titulo Obtenido: {{ponente.titulo}}</h3>
+    <H5 class="texto">Descripcion: </H5>
+   <p class="texto"> {{ponente.descripcion}}</p>
 </ion-content>
