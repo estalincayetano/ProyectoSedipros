@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { DateFormat } from '../util/helper';
 
 @Injectable()
 export class firebaseService {
@@ -17,24 +18,21 @@ export class firebaseService {
   public getGaleria() {
     return this.afDB.list('galeria/')
   }
-  public getEventosbyFecha(fecha: string): Array<any> {
+  public getEventosbyFecha(fechaFiltro: string): Array<any> {
     let instance = this;
     let arrayResp: Array<any> = new Array<any>();
     this.getEventos().valueChanges().subscribe((resp) => {
       instance.eventosnew = resp;
+      let format: DateFormat = new DateFormat();
+      let timeFiltro = format.ConvertirTime(fechaFiltro);
       for (let evento of instance.eventosnew) {
-        console.log("evento: ", evento);
-        let fechaParametro: Date = new Date(fecha);
-        let dateTeamp:string = evento.fecha;
-        let arraDate:Array<any> = dateTeamp.split("/");
-        let fechaevento: Date = new Date(Number(arraDate[2]), Number(arraDate[1]), Number(arraDate[0]));
-        console.log("conversion de fecha: ", fechaevento.getTime());
-        console.log("conversion de fechaentrada: ", fechaParametro.getTime());
-        if (fechaevento.getTime() > fechaParametro.getTime()) { //Time :: conversion a MiliSgunos 23273982787392
+        let timeEvento = format.ConvertirTime(evento.fecha);
+        if (timeEvento >= timeFiltro) {
           arrayResp.push(evento);
         }
       }
     })
+    console.log(arrayResp);
     return arrayResp;
   }
   public getEvento(id) {
