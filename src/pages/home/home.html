@@ -5,19 +5,19 @@
   Ionic pages and navigation.
 -->
 
-<ion-header>
+<ion-header class="bg">
 
   <ion-navbar>
     <button ion-button menuToggle>
        <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>home</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content class="inicio"  >
+<ion-content padding class="bg">
 
 <ion-slides *ngFor="let evento of eventos" (click)="openEventoDetail(evento)">
   <ion-slide>

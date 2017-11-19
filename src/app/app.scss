@@ -14,38 +14,51 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-$menu-ios-background: #8a9597;
-$menu-md-background: #8a9597;
-$menu-wp-background: #8a9597;
 
 .slide-title {
     margin-top: 2.8rem;
     text-align: center;
     
   }
-.inicio{
-    background-size: cover;
-    background-image: url('assets/img/fondo.png');
-    background-position: center
-}
   .slide-image {
     align-content: center;
     max-height: 50%;
     max-width: 100%;
     margin: 18px 0;
-    padding: 0 10px
+    padding: 0 10px;
   }
 
-  b {
+  .b {
     font-weight: 500;
   }
 
 
 .texto{
     text-align: justify;
-    padding: 0 10px
+    padding: 0 10px;
   }
 .ponente{
   padding: 0 10px;
   align-content: center; 
+}
+
+.bg{
+  background-image: url('https://lh6.googleusercontent.com/YdA-MJAkAJ_Qgw_WMQYA0D-rMnVtCFtlWIdqF7lUCeXFXJSkOLb3dOzox-Jcv_K1z1F_7I-UQX2mzWh1DeT0=w1366-h662');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.head{
+  background: #1d0dfd;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.color{
+  background: #5347ff;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
