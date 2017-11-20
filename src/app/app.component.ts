@@ -3,7 +3,6 @@ import { HomePage } from './../pages/home/home';
 import { GaleriaPage } from './../pages/galeria/galeria';
 import { ProyectosPage } from './../pages/proyectos/proyectos';
 import { DocumentosPage } from './../pages/documentos/documentos';
-
 import { LoginPage } from './../pages/login/login';
 import { Component ,ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';

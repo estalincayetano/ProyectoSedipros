@@ -16,19 +16,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'eventos.html',
 })
 export class EventosPage {
-  eventos=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, service: firebaseService) {
+  eventos = [];
+  fecha;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: firebaseService) {
     service.getEventos().valueChanges()
-    .subscribe(eventos => {
-      this.eventos = eventos;
-    });
+      .subscribe(eventos => {
+        this.eventos = eventos;
+      });
   }
   openEventoDetail(eventos) {
-    this.navCtrl.push(EventoDetallePage, {evento:eventos});
-}
+    this.navCtrl.push(EventoDetallePage, { evento: eventos });
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventosPage');
+  }
+
+  valuechange(event) {
+    console.log(event.target.value);
+    let fechaFiltro = event.target.value;
+    this.eventos = this.service.getEventosbyFecha(fechaFiltro);
+    console.log(this.eventos);
   }
 
 }

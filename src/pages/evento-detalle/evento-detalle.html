@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content class="page-evento-detalle">
+<ion-content class="page-evento-detalle" class="bg">
 <ion-list >
   <img class="slide-image" src="{{evento.imagen}}" />
   <h1 class="slide-title ">{{evento.titulo}}</h1>
@@ -24,7 +24,6 @@
   <p class="texto">Lugar: {{evento.lugar}}</p>
   <p class="texto">Ponente:</p>
 
-
   <ion-item *ngFor="let ponente of evento.ponente" (click)="openPonenteDetail(ponente)"class="texto">
     <ion-avatar item-left>
       <img src="{{ponente.photo}}" />
@@ -33,6 +32,7 @@
   </ion-item>
 </ion-list>
 </ion-content>
+
 <ion-footer>
   <button ion-button full icon-left color="light" (click)="openAgendaDetail()">
         <ion-icon  name="calendar"></ion-icon>

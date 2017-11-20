@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 import{AngularFireAuth}from 'angularfire2/auth';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,10 +19,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  
+  tabBarElement: any;
+  splash = true;
+
   user = {} as User;
 
   constructor( private afAuth: AngularFireAuth,
     public navCtrl: NavController, public navParams: NavParams) {
+
+      this.tabBarElement = document.querySelector('.tabbar');
+
   }
   async login() {
     try {
@@ -44,6 +53,14 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
+
+
+    setTimeout(() => {
+      this.splash = false;
+
+    }, 3500);
+
+
     console.log('ionViewDidLoad LoginPage');
   }
   register() {

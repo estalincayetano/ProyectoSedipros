@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  eventos:Array<any>;
+  eventos: Array<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servicio: firebaseService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.eventos = this.servicio.getEventosbyFecha("11/12/2017");
+    this.eventos = this.servicio.getEventosbyFecha("15/12/2017");
   }
   openEventoDetail(eventos) {
-    this.navCtrl.push(EventoDetallePage, {evento:eventos});
-}
+    this.navCtrl.push(EventoDetallePage, { evento: eventos });
+  }
 }
