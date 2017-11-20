@@ -14,11 +14,12 @@
 
 
 <ion-content padding class="bg">
+    <ion-list class="card">
     <ion-item *ngFor="let item of agenda">
-      <ion-item-divider>
+      <ion-item-divider class="card">
         {{item.hora}}
       </ion-item-divider>
       <p>{{item.actividad}}</p>
     </ion-item>
-
+  </ion-list>
 </ion-content>

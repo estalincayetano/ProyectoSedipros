@@ -15,10 +15,16 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.letras{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 200%;
+  font-weight: bolder;
+}
 
 
 .bg{
-  background-image: url('https://lh6.googleusercontent.com/YdA-MJAkAJ_Qgw_WMQYA0D-rMnVtCFtlWIdqF7lUCeXFXJSkOLb3dOzox-Jcv_K1z1F_7I-UQX2mzWh1DeT0=w1366-h662');
+  background-image: url('https://12345678910abc.000webhostapp.com/Caballo%20de%20Paso.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,6 +64,12 @@ align-content: center;
 
 //----------------------
 ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+ion-list.card {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
