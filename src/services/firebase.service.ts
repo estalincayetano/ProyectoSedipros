@@ -7,6 +7,7 @@ import { DateFormat } from '../util/helper';
 export class firebaseService {
   eventos = [];
   galeria = [];
+  documentos= [];
   eventosnew: Array<any> = new Array<any>();
   constructor(private afDB: AngularFireDatabase, private afAuth: AngularFireAuth) {
 
@@ -17,6 +18,9 @@ export class firebaseService {
   }
   public getGaleria() {
     return this.afDB.list('galeria/')
+  }
+  public getDocumentos(){
+  return this.afDB.list('documentos/')
   }
   public getEventosbyFecha(fechaFiltro: string): Array<any> {
     let instance = this;

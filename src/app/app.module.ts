@@ -3,7 +3,6 @@ import { PonenteDetallePage } from './../pages/ponente-detalle/ponente-detalle';
 import { EventoDetallePage } from './../pages/evento-detalle/evento-detalle';
 import { firebaseService } from './../services/firebase.service';
 import { EventosPage } from './../pages/eventos/eventos';
-import { ProyectosPage } from './../pages/proyectos/proyectos';
 import { GaleriaPage } from './../pages/galeria/galeria';
 import { DocumentosPage } from './../pages/documentos/documentos';
 
@@ -40,8 +39,7 @@ export const firebaseConfig={
     GaleriaPage,
     EventoDetallePage,
     PonenteDetallePage,
-    AgendaDetallePage,
-    ProyectosPage
+    AgendaDetallePage
 
   ],
   imports: [
@@ -62,8 +60,7 @@ export const firebaseConfig={
     EventoDetallePage,
     PonenteDetallePage,
     AgendaDetallePage,
-    GaleriaPage,
-    ProyectosPage
+    GaleriaPage
   ],
   providers: [
     StatusBar,

@@ -19,7 +19,6 @@ ponente:any={};
     this.ponente=this.navParams.get("ponente");
     console.log(this.ponente)
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad PonenteDetallePage');
   }

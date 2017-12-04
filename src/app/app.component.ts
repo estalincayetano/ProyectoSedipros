@@ -1,7 +1,6 @@
 import { EventosPage } from './../pages/eventos/eventos';
 import { HomePage } from './../pages/home/home';
 import { GaleriaPage } from './../pages/galeria/galeria';
-import { ProyectosPage } from './../pages/proyectos/proyectos';
 import { DocumentosPage } from './../pages/documentos/documentos';
 import { LoginPage } from './../pages/login/login';
 import { Component ,ViewChild } from '@angular/core';
@@ -24,7 +23,6 @@ pages: Array<{title: string, component: any, icon: string}>;
       {title: 'Inicio',           component: HomePage,        icon: 'home'},
       {title: 'Eventos',          component: EventosPage,     icon: 'calendar'},
       {title: 'Documentos',       component: DocumentosPage,  icon: 'document'},
-      {title: 'Proyectos',        component: ProyectosPage,   icon: 'ios-archive'},
       {title: 'Galeria',          component: GaleriaPage,     icon: 'images'},
       {title: 'Configuracion',    component: GaleriaPage,     icon: 'settings'},
       {title: 'Salir',            component: GaleriaPage,     icon: 'exit'}

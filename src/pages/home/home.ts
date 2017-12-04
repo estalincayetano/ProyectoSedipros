@@ -17,7 +17,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.eventos = this.servicio.getEventosbyFecha("15/12/2017");
+    this.eventos = this.servicio.getEventosbyFecha("04/12/2017");
   }
   openEventoDetail(eventos) {
     this.navCtrl.push(EventoDetallePage, { evento: eventos });
