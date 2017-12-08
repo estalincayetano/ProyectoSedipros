@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { firebaseService } from '../../services/firebase.service';
-import { download } from './../../models/download';
+
 /**
  * Generated class for the DocumentosPage page.
  *
