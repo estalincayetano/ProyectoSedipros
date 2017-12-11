@@ -1,16 +1,17 @@
 
 
-<ion-menu [content]='NAV' >
+
+<ion-menu [content]='NAV'  >
 
         <ion-content>
-            <ion-list>
-         <button ion-item *ngFor="let page of pages" (click)="openPage(page.component)" menuClose >
-                     <ion-icon item-left  name="{{page.icon}}"></ion-icon>
+        <ion-list>
+        <button  class="bgcolor" ion-item *ngFor="let page of pages" (click)="openPage(page.component)" menuClose >
+        <ion-icon class="bgcolor" item-left  name="{{page.icon}}"></ion-icon>
                       {{page.title}}
-                 </button>
-            </ion-list>
+        </button>
+        </ion-list>
         </ion-content>
 
     </ion-menu>
-    <ion-nav #NAV [root]="rootPage"#content swipeBackEnabled="false" ></ion-nav>
 
+    <ion-nav #NAV [root]="rootPage"#content swipeBackEnabled="false"></ion-nav>

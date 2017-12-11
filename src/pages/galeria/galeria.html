@@ -17,8 +17,8 @@
 
 
 <ion-content padding class="bg" >
-  <ion-list *ngFor="let imagen of galeria" class="inicio">
-    <ion-item>
+  <ion-list *ngFor="let imagen of galeria" >
+    <ion-item class="centro">
       <h1>{{imagen.nombreEvento}}</h1>
     </ion-item>
     <ion-list *ngFor="let foto of imagen.fotos">

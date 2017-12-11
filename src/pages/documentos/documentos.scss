@@ -1,3 +1,38 @@
 page-documentos {
 
+  .ctext{
+    color: #ffffff
+  }
+    .centrado{
+        margin:10px auto;
+        display:block;
+        }
+
+      .list > .item-block:first-child {
+        border: medium none;
+      }
+      
+      .item {
+        margin-bottom: 10px;
+          background: rgba(0, 0, 0, 0.658);
+        border: medium none;
+      }
+      
+        .text-input, {
+          color: rgb(255, 255, 255);
+        }
+      
+      .bottom {
+        position: absolute;
+        bottom: 0;
+      }
+      
+          .scroll-content {
+      
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+              align-content: center;
+              display: flex;
+          }
 }

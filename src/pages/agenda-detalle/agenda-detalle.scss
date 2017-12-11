@@ -1,3 +1,47 @@
 page-agenda-detalle {
+  
+      .color{
+          color: rgb(255, 255, 255)
+    }
 
+    .centrado{
+        margin:10px auto;
+        display:block;
+        } 
+
+    ion-list.card {
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+      }
+      
+      .list > .item-block:first-child {
+        border: medium none;
+      }
+      
+      
+      .item {
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.473);
+        border: medium none;
+      }
+      
+        .text-input, {
+          color: rgb(255, 255, 255);
+        }
+      
+      .bottom {
+        position: absolute;
+        bottom: 0;
+      }
+      
+          .scroll-content {
+      
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+              align-content: center;
+              display: flex;
+          }
 }

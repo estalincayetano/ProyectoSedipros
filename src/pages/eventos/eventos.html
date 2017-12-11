@@ -7,22 +7,26 @@
     <ion-title class="letras">Proximos Eventos</ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content  class="inicio" class="bg">
 <ion-list>
   <ion-item background-color="dark">
     <ion-label>Filtrar fecha: </ion-label>
     <ion-input type="date" [(ngModel)]="fecha" (change)="valuechange($event)"></ion-input>
   </ion-item>
+
   <ion-card *ngFor="let evento of eventos" (click)="openEventoDetail(evento)">
     <h1 class="slide-title">{{evento.titulo}}</h1>
     <img class="slide-image" src="{{evento.imagen}}" />
     <p class="texto"> {{evento.descripcion}}</p>
     <p class="texto">{{evento.fecha}}</p>
   </ion-card>
+  
   <ion-card *ngIf="eventos.length <= 0">
     <ion-card-header>
       <p>No hay eventos</p>
     </ion-card-header>
   </ion-card>
+
 </ion-list>
 </ion-content>

@@ -7,7 +7,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title class="letras">Detalle del Evento</ion-title>
+    <ion-title class="letras">Evento</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -24,7 +24,7 @@
 
   <ion-item *ngFor="let ponente of evento.ponente" (click)="openPonenteDetail(ponente)"class="texto">
     <ion-avatar item-left>
-      <img src="{{ponente.photo}}" />
+    <img src="{{ponente.photo}}" />
     </ion-avatar>
     <h4> {{ponente.nombre}}</h4>
   </ion-item>
