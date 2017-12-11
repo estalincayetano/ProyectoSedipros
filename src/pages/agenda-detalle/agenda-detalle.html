@@ -14,12 +14,16 @@
 
 
 <ion-content padding class="bg">
-    <ion-list class="card">
-    <ion-item *ngFor="let item of agenda">
+  <ion-list class="card"*ngFor="let item of agenda" (click)="openDetalle(item)">
+    <ion-item >
+      <ion-avatar item-left>
+        <img src="http://www.iemmariagoretti.edu.co/wp-content/uploads/2017/03/agenda.png" />
+      </ion-avatar>
+      <h4>{{item.hora}}</h4>
       <ion-item-divider class="card">
-        {{item.hora}}
+        <p>{{item.actividad}}</p>
       </ion-item-divider>
-      <p>{{item.actividad}}</p>
+
     </ion-item>
   </ion-list>
 </ion-content>

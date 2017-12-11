@@ -1,20 +1,12 @@
 page-login {
 
-	.scroll-content {
-
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		align-content: center;
-		display: flex;
-	}
 
 ///////////////////
 
 	#custom-overlay {
 		position: fixed;
 		top: 0;
-		right: 0;
+		right: 0; 
 		bottom: 0;
 		left: 0;
 		z-index: 100000;
@@ -35,7 +27,7 @@ page-login {
 		max-width: 50%;
 	  }
 	  .Aligner-item--top {
-		align-self: flex-start;
+			margin-top:150px;
 	  }
 	  .Aligner-item--bottom {
 		align-self: flex-end;
@@ -57,7 +49,15 @@ page-login {
 		  opacity:1;
 		}
 
-	  }
+		}
+		.scroll-content {
+			margin-top:150px;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			align-content: center;
+			display: block;
+		}
 }
 
 

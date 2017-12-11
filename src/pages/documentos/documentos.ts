@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { firebaseService } from '../../services/firebase.service';
-
+import { FileTransfer, FileTransferObject} from '@ionic-native/file-transfer';
+import {File} from '@ionic-native/file'
 /**
  * Generated class for the DocumentosPage page.
  *
@@ -18,16 +19,23 @@ import { firebaseService } from '../../services/firebase.service';
 export class DocumentosPage {
 documentos=[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private service:firebaseService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private service:firebaseService,
+    private transfer: FileTransfer, private file: File) {
     service.getDocumentos().valueChanges()
     .subscribe(documentos=>{ 
       this.documentos=documentos
     });
  }
-download(){
- /* var folderName = 'Download';
-  var fileName;
-*/
+ 
+ download() {
+  const url = 'http://www.liqun.org/mobile/sample.pdf';
+  const fileTransfer: FileTransferObject = this.transfer.create();
+  console.log("ruta: ", this.file.dataDirectory);
+  fileTransfer.download(url, this.file.dataDirectory + 'file.pdf').then((entry) => {
+    console.log('download complete: ' + entry.toURL());
+  }, (error) => {
+    // handle error
+  });
 }
   ionViewDidLoad() {
     console.log('ionViewDidLoad DocumentosPage');

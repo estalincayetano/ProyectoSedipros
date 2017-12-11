@@ -33,8 +33,16 @@
 
 
 <ion-footer>
-  <button ion-button full icon-left color="dark" (click)="openAgendaDetail()">
-        <ion-icon  name="calendar"></ion-icon>
-        Ver Agenda
-    </button>
+
+    <ion-segment [(ngModel)]="viewMode">
+            <button ion-button full icon-left color="dark" (click)="openAgendaDetail()">
+                <ion-icon  name="calendar"></ion-icon>
+                Ver Agenda
+            </button>
+            <button ion-button full icon-left color="dark" (click)="openUbicacion()">
+                <ion-icon  name="map"></ion-icon>
+                Ver Ubicacion
+            </button>
+
+    </ion-segment>
 </ion-footer>

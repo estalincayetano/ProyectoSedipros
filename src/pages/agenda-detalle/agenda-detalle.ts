@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AgendaPage } from '../agenda/agenda';
 
 /**
  * Generated class for the AgendaDetallePage page.
@@ -14,14 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'agenda-detalle.html',
 })
 export class AgendaDetallePage {
-  agenda:any={};
+  agenda: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.agenda=this.navParams.get("agenda");
-    console.log(this.agenda ,"xsds");
+    this.agenda = this.navParams.get("agenda");
+    console.log(this.agenda, "xsds");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AgendaDetallePage');
   }
-
+  openDetalle(agenda) {
+    this.navCtrl.push(AgendaPage,{agenda:agenda});
+  }
 }

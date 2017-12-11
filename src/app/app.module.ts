@@ -1,3 +1,5 @@
+import { AgendaPage } from './../pages/agenda/agenda';
+import { UbicacionEventoPage } from './../pages/ubicacion-evento/ubicacion-evento';
 import { AgendaDetallePage } from './../pages/agenda-detalle/agenda-detalle';
 import { PonenteDetallePage } from './../pages/ponente-detalle/ponente-detalle';
 import { EventoDetallePage } from './../pages/evento-detalle/evento-detalle';
@@ -5,10 +7,10 @@ import { firebaseService } from './../services/firebase.service';
 import { EventosPage } from './../pages/eventos/eventos';
 import { GaleriaPage } from './../pages/galeria/galeria';
 import { DocumentosPage } from './../pages/documentos/documentos';
-
 import { HomePage } from './../pages/home/home';
 import { LoginPage } from './../pages/login/login';
-
+import { FileTransfer, FileTransferObject} from '@ionic-native/file-transfer';
+import {File} from '@ionic-native/file'
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -37,8 +39,10 @@ export const firebaseConfig={
     HomePage,
     DocumentosPage,
     GaleriaPage,
+    AgendaPage,
     EventoDetallePage,
     PonenteDetallePage,
+    UbicacionEventoPage,
     AgendaDetallePage
 
   ],
@@ -47,7 +51,7 @@ export const firebaseConfig={
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
 
   ],
   bootstrap: [IonicApp],
@@ -56,14 +60,19 @@ export const firebaseConfig={
     LoginPage,
     EventosPage,
     HomePage,
+    AgendaPage,
     DocumentosPage,
     EventoDetallePage,
     PonenteDetallePage,
     AgendaDetallePage,
+    UbicacionEventoPage,
     GaleriaPage
   ],
   providers: [
     StatusBar,
+    FileTransfer,
+    FileTransferObject,
+    File, 
     SplashScreen,
     firebaseService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

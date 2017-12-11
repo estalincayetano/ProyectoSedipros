@@ -16,3 +16,6 @@ export class DateFormat {
         return fechaevento.getTime();
     }
 }
+export class FechaActual{
+    
+}

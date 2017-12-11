@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "587850499268",
+    "firebase_url": "https://proyecto-sedipro.firebaseio.com",
+    "project_id": "proyecto-sedipro",
+    "storage_bucket": "proyecto-sedipro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587850499268:android:7f5e5e2780a8db8e",
+        "android_client_info": {
+          "package_name": "com.proyecto.sediproucv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587850499268-lvn6uu6ao0id5mruto3etqvl3u1hjien.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1GHirPOqEJ8wtXzXdcAL308ZIg8ROhTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

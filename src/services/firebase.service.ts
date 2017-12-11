@@ -10,7 +10,7 @@ export class firebaseService {
   documentos= [];
   eventosnew: Array<any> = new Array<any>();
   constructor(private afDB: AngularFireDatabase, private afAuth: AngularFireAuth) {
-
+    
   }
 
   public getEventos() {

@@ -17,12 +17,17 @@
 
 
 <ion-content padding class="bg">
-  <ion-list inset>
+
+  <ion-list no-lines *ngFor="let item of documentos">
+    <div ion-item  >
       <ion-avatar item-left>
-          <img src="" />
-        </ion-avatar>
-    <button ion-item *ngFor="let item of documentos" (click)="download(item)">
-      {{ item.titulo }}
-    </button> 
+        <img src="http://www.freeiconspng.com/uploads/download-pdf-icon-png-icon-29.png" />
+      </ion-avatar>
+      <a class="texto" href="{{item.url}}" onclick="windows.open('href','_system','location=yes')">
+         {{ item.titulo }}
+       </a>
+      
+    </div>  
+
   </ion-list>
 </ion-content>

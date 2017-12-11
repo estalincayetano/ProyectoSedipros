@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PonenteDetallePage page.
+ * Generated class for the AgendaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,17 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-ponente-detalle',
-  templateUrl: 'ponente-detalle.html',
+  selector: 'page-agenda',
+  templateUrl: 'agenda.html',
 })
-export class PonenteDetallePage {
-ponente:any={};
+export class AgendaPage {
+agenda:any={};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.ponente=this.navParams.get("ponente");
-    console.log(this.ponente) 
+  this.agenda=this.navParams.get("agenda");
+  console.log(this.agenda)
   }
+
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PonenteDetallePage');
+    console.log('ionViewDidLoad AgendaPage');
   }
 
 }

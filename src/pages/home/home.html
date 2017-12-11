@@ -21,14 +21,14 @@
 
 <ion-content padding class="bg">
 
-<ion-slides *ngFor="let evento of eventos" (click)="openEventoDetail(evento)">
-  <ion-slide>
+<ion-slides  pager="true">
+  <ion-slide *ngFor="let evento of eventos" (click)="openEventoDetail(evento)">
       <ion-card>
           <h1 class="slide-title">{{evento.titulo}}</h1>
           <img class="slide-image" src="{{evento.imagen}}" />
           <p class="texto"> {{evento.descripcion}}</p>
           <p>{{evento.fecha}}</p>
-      </ion-card>
+      </ion-card> 
   </ion-slide>
 </ion-slides>
 

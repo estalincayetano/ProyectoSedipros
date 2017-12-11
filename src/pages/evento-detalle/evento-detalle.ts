@@ -2,6 +2,7 @@ import { AgendaDetallePage } from './../agenda-detalle/agenda-detalle';
 import { PonenteDetallePage } from './../ponente-detalle/ponente-detalle';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UbicacionEventoPage } from '../ubicacion-evento/ubicacion-evento';
 
 /**
  * Generated class for the EventoDetallePage page.
@@ -33,4 +34,16 @@ agenda:any={};
   openAgendaDetail(){
     this.navCtrl.push(AgendaDetallePage,{agenda:this.agenda});
   }
+  openUbicacion(){
+    this.navCtrl.push(UbicacionEventoPage)
+  }
+ /* showMap() {
+    setTimeout(() => {
+        this.map = leaflet.map("map").setView([42.361132, -71.070876], 14);
+        leaflet.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri'
+        }).addTo(this.map);
+        this.showMarkers();
+    })
+}*/
 }
