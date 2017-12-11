@@ -1,13 +1,49 @@
 page-register {
     
-	.scroll-content {
-		
-				flex-direction: column;
-				justify-content: center;
-				text-align: center;
-				align-content: center;
-				display: flex;
-			}
-		
 
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	  }
+	  
+	  ion-list.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	  }
+	  
+	  a, p, h1,
+	  ion-card-header.card-header {
+		color: rgb(255, 255, 255)!important;
+	  }
+	  
+	  .list > .item-block:first-child {
+		border: medium none;
+	  }
+	  
+	  .item {
+		margin-bottom: 10px;
+		  background: rgba(255, 255, 255, 0.26);
+		border: medium none;
+	  }
+	  
+		.text-input, {
+		  color: rgb(255, 255, 255);
+		}
+	  
+	  .bottom {
+		position: absolute;
+		bottom: 0;
+	  }
+	  
+		  .scroll-content {
+	  
+			  flex-direction: column;
+			  justify-content: center;
+			  text-align: center;
+			  align-content: center;
+			  display: flex;
+		  }
+	  
 }
